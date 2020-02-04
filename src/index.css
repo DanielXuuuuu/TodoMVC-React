@@ -1,0 +1,374 @@
+@import '~antd/dist/antd.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 200;
+}
+
+html, body {
+  min-width: 1000px;
+  background-color: #F7F7F7;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 100;
+  color: #b55959;
+}
+
+#main{
+  max-width: 1000px;
+  margin: 50px auto 150px;
+}
+
+#left{
+  position: relative;
+  float: left;
+  width: 250px;
+  padding: 20px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
+  -webkit-box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
+}
+
+.fixed{
+  position: fixed;
+  top: 10px;
+}
+
+#left header{
+  font-size: 23px;
+  font-weight: 1;
+  margin-bottom: 20px;
+}
+
+#left main div{
+  display: flex;
+  font-style: italic;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+#left footer{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+#left footer a{
+  text-decoration: none;
+  color: black;
+}
+
+#left footer a:hover{
+  text-decoration: underline;
+  color: red;
+}
+
+#right {
+  overflow: hidden;
+  min-width: 700px;
+  margin-left: 270px;
+  font-size: 25px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
+  -webkit-box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
+}
+
+#right input {
+  text-align: left;
+  outline-style: none;
+  border: none;
+}
+
+#right input#add-todo {
+  width: 100%;
+  height: 90px;
+  text-align: left;
+  outline-style: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 35px;
+  border-bottom: 2px solid #ddd;
+  padding:0 30px;
+}
+
+#add-todo::placeholder {
+  font-style: italic;
+  color: #d6d6d6;
+}
+#todo-list{
+  margin: 0;
+}
+
+#todo-list li{
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+}
+
+#todo-list div{
+  height: 100%;
+}
+
+#todo-list input[type="text"]{
+  margin:0 60px;
+  width: 590px;
+  height: 100%;
+  transition:opacity 1s;
+}
+
+input.completed{
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+#todo-list li:hover button{
+  visibility: visible;
+}
+
+.Checkbox{
+  position: absolute;
+  visibility: hidden;
+}
+
+.Checkbox+label {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50px;
+  border: 2px solid #b55959;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  font-size: 40px;
+  cursor: pointer;
+} 
+
+.Checkbox:checked+label {
+  color: #0eb83a;
+  border: 2px solid #0eb83a;
+}
+
+.Checkbox:checked+label:after {
+  content: "\2713";
+}
+
+#todo-list button{
+  visibility: hidden;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  font-size: 50px;
+  border: 0;
+  color: #cc9a9a;
+  outline-style: none;
+  cursor: pointer;
+}
+
+#todo-list button:after {
+  content: '×';
+}
+
+#todo-list button:hover {
+  color: #af5b5e;
+}
+
+#bottomChoice{
+  position: relative;
+}
+
+#bottomChoice button{
+  border: 0;
+  outline-style: none;
+  cursor: pointer;
+}
+
+#bottomChoice button:hover{
+  border: 0;
+  outline-style: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#toggleAll {
+  position: absolute;
+  left: 20px;
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+#clear {
+  position: absolute;
+  right: 20px;
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+#info {
+  display: inline-block;
+  width: 250px;
+  font-size: 17px;
+  padding: 10px;
+}
+
+
+
+footer p{
+  font-size: 15px;
+  color: #aaa;
+}
+
+/* react 动画 */
+.react-animation-appear {
+  opacity: 0.1;
+}
+.react-animation-appear.react-animation-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.react-animation-enter {
+  opacity: 0.1;
+}
+.react-animation-enter.react-animation-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.react-animation-leave {
+  opacity: 1;
+}
+.react-animation-leave.react-animation-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+
+/* login */
+#login-main {
+  font-size: 25px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
+  -webkit-box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
+}
+
+#login-main header{
+  padding-top: 40px;
+}
+
+#login-main header span{
+  display: inline-block;
+  width: 40px;
+}
+
+form {
+  padding: 50px 40px;
+}
+
+.formItem {
+  position: relative;
+  font-size: 10px;
+}
+
+form .iconfont{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  font-size: 15px;
+}
+
+form input{
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  font-size: 17px;
+  background-color: #F7F7F7;
+  padding-left: 30px;
+  border: solid 1px #D7D7D7;;
+}
+
+form button{
+  margin-top: 40px;
+  width: 100%;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #177CB7;
+  color: white;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  font-size: 20px;
+  font-weight: 10;
+  cursor: pointer;
+}
+
+#login-main form button{
+  margin-top: 40px;
+  background-color: #177CB7;
+}
+
+#signup-main form button{
+  margin: 30px 0;
+  background-color: #3DB922;
+}
+
+/* signup */
+#signup-main{
+  font-size: 25px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-200px, -250px);
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
+  -webkit-box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
+}
+
+#signup-main header{
+  padding-top: 40px;
+}
+
+#signup-main header span{
+  display: inline-block;
+  width: 40px;
+}
+
+p{
+  font-size: 10px;
+}
+
+a{
+  text-decoration: underline;
+}

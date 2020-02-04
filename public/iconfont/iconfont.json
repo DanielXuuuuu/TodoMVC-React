@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7772191",
+      "name": "icon_dmail_fill",
+      "font_class": "icon_dmail_fill",
+      "unicode": "eba6",
+      "unicode_decimal": 60326
+    },
+    {
+      "icon_id": "7772214",
+      "name": "icon_people_fill",
+      "font_class": "icon_people_fill",
+      "unicode": "ebac",
+      "unicode_decimal": 60332
+    },
+    {
+      "icon_id": "11749355",
+      "name": "锁",
+      "font_class": "suo",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    }
+  ]
+}

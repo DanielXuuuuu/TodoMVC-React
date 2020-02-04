@@ -1,0 +1,18 @@
+{
+  "deploy": {
+    "production": {
+      "key": "~/WorkPlace/XK.pem",
+      "user": "root",
+      "host": "139.196.21.233",
+      "port": "22",
+      "ref": "origin/master",
+      "repo": "git@github.com:DanielXuuuuu/TodoMVC-Server.git", 
+      "path": "/root/workplace/TodoMVC",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "post-deploy": "npm install && npm run build && cp -f build /usr/my-todolist-react/",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
