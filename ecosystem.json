@@ -9,7 +9,7 @@
       "repo": "git@github.com:DanielXuuuuu/TodoMVC-React.git", 
       "path": "/root/workplace/TodoMVC-React/",
       "ssh_options": "StrictHostKeyChecking=no",
-      "post-deploy": "npm install && npm run build && cp -f build /usr/my-todolist-react/",
+      "post-deploy": "npm install && npm run build && cp -rf build /usr/my-todolist-react/",
       "env": {
         "NODE_ENV": "production"
       }
