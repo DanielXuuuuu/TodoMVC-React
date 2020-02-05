@@ -13,7 +13,7 @@ const Home = () => (
       <Todo />
     </main>
 
-    <footer id="">
+    <footer>
       <p>TodoMVC-Demo</p>
       <p>Daniel Xu | 2020.1.25</p>
     </footer>

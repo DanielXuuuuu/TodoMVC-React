@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { userAction } from '../../redux/actions/userActions';
-
+import { message } from 'antd';
 class Login extends React.Component {
   constructor(props){
     super(props);
@@ -20,6 +20,12 @@ class Login extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    for(let key in this.state){
+      if(this.state[key] === ""){
+        message.warn("Please fill the form first!");
+        return;
+      }
+    }
     this.props.login(this.state);
   }
 
@@ -33,7 +39,7 @@ class Login extends React.Component {
         </header>
         <form onSubmit={this.handleSubmit}>
           <div className="formItem">
-            <i className="iconfont icon-icon_people_fill"></i>
+            <i className="iconfont icon-icon_dmail_fill"></i>
             <input type="text" name="email" placeholder="Email"
               value={this.state.email}
               onChange={this.handleChange}
