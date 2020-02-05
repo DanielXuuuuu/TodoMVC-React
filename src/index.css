@@ -46,7 +46,7 @@ main{
   -webkit-box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
 }
 
-.fixed{
+#left.fixed{
   position: fixed;
   top: 10px;
 }
