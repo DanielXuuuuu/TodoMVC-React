@@ -51,7 +51,7 @@ class Signup extends React.Component {
 
   render(){
     return (
-      <div id="signup-main">
+      <div id="signup" className="form-container">
         <header>
           <Link to="sign_in" style={inactiveLinkStyle}>Sign in</Link>
           <span>·</span> 

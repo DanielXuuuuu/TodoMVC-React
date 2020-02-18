@@ -31,7 +31,7 @@ class Login extends React.Component {
 
   render(){
     return (
-      <div id="login-main">
+      <div id="signin" className="form-container">
         <header>
           <Link to="sign_in" style={activeLinkStyle}>Sign in</Link>
           <span>·</span> 

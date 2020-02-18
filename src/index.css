@@ -9,22 +9,40 @@
 }
 
 html {
+  font-size: 100px;
   height: 100%;
+  background-color: #F7F7F7;
+}
+
+@media only screen and (max-width: 1000px) {
+  html { 
+    font-size:90px;
+  }
+
+  #left{
+    display: none;
+  }
+
+  #right{
+    width: 90% !important;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width:500px){ 
+  html { 
+    font-size:80px;
+  } 
 }
 
 #root{
   min-height: 100%;
   position: relative;
-  padding-bottom: 150px;
-}
-
-body {
-  min-width: 1000px;
-  background-color: #F7F7F7;
+  padding-bottom: 1.5rem;
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 1rem;
   font-weight: 100;
   color: #b55959;
 }
@@ -37,13 +55,14 @@ main{
 #left{
   position: relative;
   float: left;
+  margin: 0 20px;
   width: 250px;
   padding: 20px;
   height: 200px;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
-  -webkit-box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
+  box-shadow: 0 0.15rem 0.15rem#ebebeb, 0 -0.15rem 0.15rem#ebebeb, 0.15rem 0 0.1rem#ebebeb, -0.15rem 0 0.1rem#ebebeb;
+  -webkit-box-shadow: 0 0.15rem 0.15rem#ebebeb, 0 -0.15rem 0.15rem#ebebeb, 0.15rem 0 0.1rem#ebebeb, -0.15rem 0 0.1rem#ebebeb;
 }
 
 #left.fixed{
@@ -52,8 +71,8 @@ main{
 }
 
 #left header{
-  font-size: 23px;
-  font-weight: 1;
+  font-size: 0.2rem;
+  font-weight: 50;
   margin-bottom: 20px;
 }
 
@@ -84,13 +103,12 @@ main{
 
 #right {
   overflow: hidden;
-  min-width: 700px;
-  margin-left: 270px;
-  font-size: 25px;
-  border-radius: 5px;
+  width: 700px;
+  font-size: 0.25rem;
+  border-radius: 0.05rem;
   background-color: white;
-  box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
-  -webkit-box-shadow: 0px 15px 15px#ebebeb, 0px -15px 15px#ebebeb, 15px 0px 10px#ebebeb, -15px 0px 10px#ebebeb;
+  box-shadow: 0 0.15rem 0.15rem#ebebeb, 0 -0.15rem 0.15rem#ebebeb, 0.15rem 0 0.1rem#ebebeb, -0.15rem 0 0.1rem#ebebeb;
+  -webkit-box-shadow: 0 0.15rem 0.15rem#ebebeb, 0 -0.15rem 0.15rem#ebebeb, 0.15rem 0 0.1rem#ebebeb, -0.15rem 0 0.1rem#ebebeb;
 }
 
 #right input {
@@ -101,14 +119,14 @@ main{
 
 #right input#add-todo {
   width: 100%;
-  height: 90px;
+  height: 0.9rem;
   text-align: left;
   outline-style: none;
   border: none;
-  border-radius: 5px;
-  font-size: 35px;
-  border-bottom: 2px solid #ddd;
-  padding:0 30px;
+  border-radius: 0.05rem;
+  font-size: 0.4rem;
+  border-bottom: 0.02rem solid #ddd;
+  padding:0 0.3rem;
 }
 
 #add-todo::placeholder {
@@ -126,8 +144,8 @@ main{
   width: 100%;
   text-align: left;
   position: relative;
-  height: 70px;
-  border-bottom: 1px solid #ccc;
+  height: 0.7rem;
+  border-bottom: 0.01rem solid #ccc;
 }
 
 #todo-list div{
@@ -135,8 +153,8 @@ main{
 }
 
 #todo-list input[type="text"]{
-  margin:0 60px;
-  width: 590px;
+  margin:0 0.6rem;
+  width: 82%;
   height: 100%;
   transition:opacity 1s;
 }
@@ -157,25 +175,25 @@ input.completed{
 
 .Checkbox+label {
   position: absolute;
-  left: 20px;
+  left: 0.2rem;
   top: 0;
   bottom: 0;
   margin: auto;
-  border-radius: 50px;
-  border: 2px solid #b55959;
-  width: 30px;
-  height: 30px;
+  border-radius: 0.5rem;
+  border: 0.02rem solid #b55959;
+  width: 0.3rem;
+  height: 0.3rem;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  line-height: 20px;
-  font-size: 40px;
+  line-height: 0.2rem;
+  font-size: 0.4rem;
   cursor: pointer;
 } 
 
 .Checkbox:checked+label {
   color: #0eb83a;
-  border: 2px solid #0eb83a;
+  border: 0.02rem solid #0eb83a;
 }
 
 .Checkbox:checked+label:after {
@@ -185,10 +203,10 @@ input.completed{
 #todo-list button{
   visibility: hidden;
   position: absolute;
-  right: 10px;
+  right: 0.1rem;
   top: 0;
   bottom: 0;
-  font-size: 50px;
+  font-size: 0.5rem;
   border: 0;
   color: #cc9a9a;
   outline-style: none;
@@ -206,6 +224,8 @@ input.completed{
 
 #bottomChoice{
   position: relative;
+  font-size: 0.17rem;
+  padding: 0.1rem;
 }
 
 #bottomChoice button{
@@ -224,38 +244,32 @@ input.completed{
 
 #toggleAll {
   position: absolute;
-  left: 20px;
-  font-size: 17px;
-  padding: 10px 0;
+  left: 0.2rem;
 }
 
 #clear {
   position: absolute;
-  right: 20px;
-  font-size: 17px;
-  padding: 10px 0;
+  right: 0.2rem;
+}
+
+#info {
+  display: inline-block;
+  width: 2.5rem;
 }
 
 .hidden{
   visibility: hidden;
 }
 
-#info {
-  display: inline-block;
-  width: 250px;
-  font-size: 17px;
-  padding: 10px;
-}
-
 footer{
-  height: 100px;
+  height: 1rem;
   position: absolute;
   width: 100%;
   bottom: 0;
 }
 
 footer p{
-  font-size: 15px;
+  font-size: 0.15rem;
   color: #aaa;
 }
 
@@ -282,112 +296,91 @@ footer p{
   transition: opacity 300ms ease-in;
 }
 
-
-/* login */
-#login-main {
-  font-size: 25px;
+.form-container {
+  font-size: 0.25rem;
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
+  position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+  margin: auto;
+  width: 4rem;
   margin: auto;
   background-color: white;
-  box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
-  -webkit-box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
+  box-shadow: 0 0.15rem 0.15rem#ebebeb, 0 -0.15rem 0.15rem#ebebeb, 0.15rem 0 0.1rem#ebebeb, -0.15rem 0 0.1rem#ebebeb;
+  -webkit-box-shadow: 0 0.15rem 0.15rem#ebebeb, 0 -0.15rem 0.15rem#ebebeb, 0.15rem 0 0.1rem#ebebeb, -0.15rem 0 0.1rem#ebebeb;
 }
 
-#login-main header{
-  padding-top: 40px;
+#signin {
+  height: 4rem;
 }
 
-#login-main header span{
+#signup {
+  height: 5.2rem;
+}
+
+#signin form button{
+  margin-top: 0.5rem;
+  background-color: #177CB7;
+}
+
+#signup form button{
+  margin: 0.3rem 0;
+  background-color: #3DB922;
+}
+
+.form-container header{
+  padding-top: 0.4rem;
+}
+
+.form-container header span{
   display: inline-block;
-  width: 40px;
+  width: 0.4rem;
 }
 
 form {
-  padding: 50px 40px;
+  padding: 0.5rem 0.4rem;
 }
 
 .formItem {
   position: relative;
-  padding: 1px;
-  font-size: 10px;
+  padding: 0.01rem;
+  font-size: 0.1rem;
 }
 
 form .iconfont{
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 0.1rem;
   transform: translateY(-50%);
   opacity: 0.5;
-  font-size: 15px;
+  font-size: 0.15rem;
 }
 
 form input{
   width: 100%;
-  height: 50px;
+  height: 0.5rem;
   text-align: left;
-  font-size: 17px;
+  font-size: 0.17rem;
   background-color: #F7F7F7;
-  padding-left: 30px;
-  border: solid 1px #D7D7D7;;
+  padding-left: 0.3rem;
+  border: solid 0.01rem #D7D7D7;;
 }
 
 form button{
-  margin-top: 40px;
+  margin-top: 0.4rem;
   width: 100%;
-  height: 40px;
+  height: 0.4rem;
   border-style: none;
-  border-radius: 30px;
-  background-color: #177CB7;
+  border-radius: 0.3rem;
   color: white;
-  right: 10px;
+  right: 0.1rem;
   top: 0;
   bottom: 0;
-  font-size: 20px;
+  font-size: 0.2rem;
   font-weight: 10;
   cursor: pointer;
 }
 
-#login-main form button{
-  margin-top: 40px;
-  background-color: #177CB7;
-}
-
-#signup-main form button{
-  margin: 30px 0;
-  background-color: #3DB922;
-}
-
-/* signup */
-#signup-main{
-  font-size: 25px;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-200px, -250px);
-  width: 400px;
-  height: 500px;
-  margin: auto;
-  background-color: white;
-  box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
-  -webkit-box-shadow: 0px 10px 10px#ebebeb, 0px -10px 10px#ebebeb, 10px 0px 10px#ebebeb, -10px 0px 10px#ebebeb;
-}
-
-#signup-main header{
-  padding-top: 40px;
-}
-
-#signup-main header span{
-  display: inline-block;
-  width: 40px;
-}
-
 p{
-  font-size: 10px;
+  font-size: 0.1rem;
 }
 
 a{
