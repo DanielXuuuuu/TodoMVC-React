@@ -15,6 +15,7 @@ const Home = () => (
 
     <footer>
       <p>TodoMVC-Demo</p>
+      <p>DoubleClick to edit your Todos</p>
       <p>Daniel Xu | 2020.1.25</p>
     </footer>
   </>

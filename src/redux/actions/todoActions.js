@@ -82,9 +82,9 @@ function toggleAllTodo(value){
           dispatch({type:userConstants.COMPLETED_NUM_CHANGE, num})
         },
         error => {
-          message.error(error)
+          message.error(error);
         }
-      )
+      );
   }
 }
 

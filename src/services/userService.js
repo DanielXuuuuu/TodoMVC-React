@@ -12,7 +12,7 @@ export const userService = {
 function signup(data){
   return fetch(`http://${BASE_URL}:8000/api/signup`, requestOptions("POST", data))
     .then(checkStatus)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 // 登录
 function login(data){
@@ -22,7 +22,7 @@ function login(data){
     .then(data => {
       localStorage.setItem("user", JSON.stringify(data.user));
       return data;
-    });
+    })
 }
 // 登出
 function logout() {
@@ -36,7 +36,7 @@ function getProfile(data){
     .then(handleResponse)
     .then(data => {
       return data;
-    });
+    })
 }
 
 const requestOptions = (method, data) => ({

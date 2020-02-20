@@ -14,37 +14,37 @@ export const todoService = {
 function getTodoList(){
   return fetch(`http://${BASE_URL}:8000/api/todos`, requestOptions('GET'))
     .then(checkStatus)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 
 function addTodo(data){
   return fetch(`http://${BASE_URL}:8000/api/todos`, requestOptions('POST', data))
     .then(checkStatus)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 
 function updateTodo(data){
   return fetch(`http://${BASE_URL}:8000/api/todos`, requestOptions('PUT', data))
   .then(checkStatus)
-  .then(handleResponse);
+  .then(handleResponse)
 }
 
 function toggleTodo(data){
   return fetch(`http://${BASE_URL}:8000/api/todos/toggle`, requestOptions('PUT', data))
     .then(checkStatus)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 
 function deleteTodo(data){
   return fetch(`http://${BASE_URL}:8000/api/todos`, requestOptions('DELETE', data))
     .then(checkStatus)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 
 function deleteCompleted(){
   return fetch(`http://${BASE_URL}:8000/api/todos/deleteCompleted`, requestOptions('DELETE'))
     .then(checkStatus)
-    .then(handleResponse);
+    .then(handleResponse)
 }
 
 const requestOptions = (method, data) => ({

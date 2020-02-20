@@ -11,7 +11,6 @@
 html {
   font-size: 100px;
   height: 100%;
-  background-color: #F7F7F7;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -24,6 +23,7 @@ html {
   }
 
   #right{
+    float: none !important;
     width: 90% !important;
     margin: auto;
   }
@@ -39,6 +39,9 @@ html {
   min-height: 100%;
   position: relative;
   padding-bottom: 1.5rem;
+  overflow: hidden;
+  background-color: #F7F7F7;
+
 }
 
 h1 {
@@ -103,6 +106,7 @@ main{
 
 #right {
   overflow: hidden;
+  float: right;
   width: 700px;
   font-size: 0.25rem;
   border-radius: 0.05rem;
@@ -174,7 +178,7 @@ main{
   border: #aaa solid 0.02rem;
 }
 
-#viewLabel.completed{
+#todoText.completed{
   text-decoration: line-through;
   opacity: 0.3;
 }
