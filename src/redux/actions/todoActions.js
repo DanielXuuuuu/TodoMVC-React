@@ -58,7 +58,9 @@ function updateTodo(tid, key, value){
       .then(
         data => {
           const num = data.num;
-          console.log(num)
+          if(key !== 'completed'){
+            message.success(data.message)
+          }
           dispatch({type: todoConstants.UPDATE_TODO, tid, key, value});
           dispatch({type: userConstants.COMPLETED_NUM_CHANGE, num})
         },

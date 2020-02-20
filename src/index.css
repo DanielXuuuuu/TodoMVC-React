@@ -144,7 +144,7 @@ main{
   width: 100%;
   text-align: left;
   position: relative;
-  height: 0.7rem;
+  min-height: 0.7rem;
   border-bottom: 0.01rem solid #ccc;
 }
 
@@ -152,14 +152,29 @@ main{
   height: 100%;
 }
 
-#todo-list input[type="text"]{
-  margin:0 0.6rem;
+#todo-list #todoText{
+  display: inline-block;
+  margin: 0 0.6rem;;
+  padding: 2% 0;
   width: 82%;
   height: 100%;
   transition:opacity 1s;
+  text-align: left;
+  word-wrap: break-word;
+  user-select:none;
 }
 
-input.completed{
+#todo-list li input.edit{
+  display: inline-block;
+  margin-left: 8%;
+  padding-left: 1%;
+  width: 90%;
+  height: 0.7rem;
+  text-align: left;
+  border: #aaa solid 0.02rem;
+}
+
+#viewLabel.completed{
   text-decoration: line-through;
   opacity: 0.3;
 }
@@ -176,8 +191,8 @@ input.completed{
 .Checkbox+label {
   position: absolute;
   left: 0.2rem;
-  top: 0;
-  bottom: 0;
+  top: 0.2rem;
+  /* bottom: 0; */
   margin: auto;
   border-radius: 0.5rem;
   border: 0.02rem solid #b55959;
@@ -204,7 +219,6 @@ input.completed{
   visibility: hidden;
   position: absolute;
   right: 0.1rem;
-  top: 0;
   bottom: 0;
   font-size: 0.5rem;
   border: 0;
